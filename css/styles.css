@@ -3,7 +3,10 @@
   --secondary-text-color: #ffffff;
   --accent-color: #2196f3;
   --section-title-text: #212121;
-  --primary-bg-color: #e5e5e5;
+  --primary-bg-color: #ffffff;
+  --section-bg-color: #f5f4fa;
+  --hero-footer-bg-color: #2f303a;
+  --hero-btn-hover-color: #188ce8;
 }
 
 body {
@@ -17,7 +20,19 @@ body {
 ul {
   list-style: none;
 }
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
 
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
 /* ---HEADER--- */
 
 /* logo */
@@ -67,7 +82,7 @@ ul {
 
 /* hero */
 .hero {
-  background-color: #2f303a;
+  background-color: var(--hero-footer-bg-color);
 }
 .hero-text {
   color: var(--secondary-text-color);
@@ -81,6 +96,7 @@ ul {
 .hero-btn {
   background-color: var(--accent-color);
   color: var(--secondary-text-color);
+  font-family: 'Roboto';
   font-weight: 700;
   font-size: 16px;
   line-height: 1.88;
@@ -89,6 +105,10 @@ ul {
   text-align: center;
   letter-spacing: 0.06em;
   cursor: pointer;
+}
+.hero-btn:hover,
+.hero-btn:focus {
+  background-color: var(--hero-btn-hover-color);
 }
 /* strange */
 .strange-title,
@@ -116,6 +136,9 @@ ul {
   text-align: center;
 }
 /* team */
+.team {
+  background-color: var(--section-bg-color);
+}
 .team-title,
 .team-title-text {
   color: var(--section-title-text);
@@ -142,11 +165,13 @@ ul {
 
 .projects-btn {
   color: var(--section-title-text);
+  font-family: 'Roboto';
   font-weight: 500;
   font-size: 16px;
   line-height: 1.62;
   text-align: center;
   cursor: pointer;
+  letter-spacing: 0.03em;
 }
 .projects-btn:hover,
 .projects-btn:focus {
@@ -179,7 +204,7 @@ ul {
 /* ---FOOTER---*/
 
 .footer {
-  background-color: #2f303a;
+  background-color: var(--hero-footer-bg-color);
 }
 /* logo */
 .logo-web-footer {
@@ -190,6 +215,9 @@ ul {
   text-decoration: none;
 }
 /* contacts */
+.addres {
+  font-style: normal;
+}
 .addres-map {
   color: var(--secondary-text-color);
 }
@@ -201,9 +229,7 @@ ul {
 }
 .addres-map,
 .footer-contacts {
-  font-style: normal;
-  font-size: 14px;
-  line-height: 17.1;
+  line-height: 1.71;
   text-decoration: none;
 }
 .footer-contacts {
